@@ -9,7 +9,7 @@ export interface CopyADocumentOrTemplateV2Response {
   thread: CopiedThread;
 }
 
-interface CopiedThread extends Thread {
+export interface CopiedThread extends Thread {
   secret_path: string;
 }
 

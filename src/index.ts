@@ -35,7 +35,8 @@ export class Client {
   }
 
   copyADocumentOrTemplateV2(threadIdOrSecretPath: string, body: CopyADocumentOrTemplateV2Request) {
-    return this.post<CopyADocumentOrTemplateV2Response, CopyADocumentOrTemplateV2Request>(`2/threads/${threadIdOrSecretPath}/copy`, body);
+    return this.post<CopyADocumentOrTemplateV2Response, CopyADocumentOrTemplateV2Request>(`2/threads/${threadIdOrSecretPath}/copy`, body)
+      .then(response => response.thread);
   }
 
   getThreadMembersV2(threadIdOrSecretPath: string) {
