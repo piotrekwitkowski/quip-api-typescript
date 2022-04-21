@@ -1,9 +1,14 @@
 # quip-api-typescript
 
-This is the unofficial and incomplete, but TypeScript-compatible and promise-based library to access the [Quip Automation API](https://quip.com/api/).
+This is the unofficial TypeScript-compatible and promise-based library to access the [Quip Automation API](https://quip.com/api/). 
 
-* [Quip Automation API Reference](https://quip.com/api/reference)
-* [Get a Personal Automation API Access Token](https://quip.com/api/personal-token)
+## Notice 
+
+This library should be considered as Work In Progress. The [official Quip Node library](https://github.com/quip/quip-api/) wasn't updated in the last 6 years, so I created this one that is much more convenient to use thanks to typings and promises.
+
+## Installation
+
+`npm i quip-api-typescript`
 
 ## Usage
 
@@ -19,6 +24,11 @@ const client = new Client(ACCESS_TOKEN);
 client.getThreadHtmlV2.then(response => console.log(response.html)); 
 ```
 
+## Official Docs 
+
+* [Quip Automation API Reference](https://quip.com/api/reference)
+* [Get a Personal Automation API Access Token](https://quip.com/api/personal-token)
+
 ## Contributing
 
-Please feel encouraged to submit Pull Requests!
+PRs are welcome! Please feel encouraged to star this repo too!
