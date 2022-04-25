@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "moduleResolution": "node",
+    "isolatedModules": true,
     "declaration": true,
     // "declarationMap": true,
     // "sourceMap": true,
@@ -15,7 +16,8 @@
     "outDir": "./dist",
     //properties are not initialized in abstract classes 
     "strictPropertyInitialization": false,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "esModuleInterop": true
   },
   "include": [
     "src/index.ts",
