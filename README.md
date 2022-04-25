@@ -23,10 +23,17 @@ const ACCESS_TOKEN = 'your-access-token';
 const client = getQuipClient(ACCESS_TOKEN);
 
 // use like this
-client.threads.getThreadHtmlV2({ id: '' }).then(response => console.log(response.html)); 
+client.threads.getThreadHtmlV2({ id: '' }).then(response => console.log(response.html));
+
+// or
+client.users.getUser({ id: 'john@acme.com'} ).then(response => doSomething());
 ```
 
-## Official Docs 
+## Documentation
+
+More methods, request and response types can be found in the [documentation](https://piotrekwitkowski.github.io/quip-api-typescript/).
+
+## Official Quip API Docs
 
 * [Quip Automation API Reference](https://quip.com/api/reference)
 * [Get a Personal Automation API Access Token](https://quip.com/api/personal-token)
