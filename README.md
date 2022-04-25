@@ -1,5 +1,7 @@
 # quip-api-typescript
 
+[![codecov](https://codecov.io/gh/piotrekwitkowski/quip-api-typescript/branch/main/graph/badge.svg?token=T2G2GO9T9K)](https://codecov.io/gh/piotrekwitkowski/quip-api-typescript)
+
 This is the unofficial TypeScript-compatible and promise-based library to access the [Quip Automation API](https://quip.com/api/). 
 
 ## Notice 
@@ -15,13 +17,13 @@ This library should be considered as Work In Progress. The [official Quip Node l
 For now, the library supports only access token auth (no OAuth).
 
 ```ts
-import { Client } from 'quip-api-typescript';
+import { getQuipClient } from 'quip-api-typescript';
 
 const ACCESS_TOKEN = 'your-access-token';
-const client = new Client(ACCESS_TOKEN);
+const client = getQuipClient(ACCESS_TOKEN);
 
 // use like this
-client.getThreadHtmlV2.then(response => console.log(response.html)); 
+client.threads.getThreadHtmlV2({ id: '' }).then(response => console.log(response.html)); 
 ```
 
 ## Official Docs 
