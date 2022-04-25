@@ -1,26 +1,10 @@
 {
+  "include": ["src/**/*.ts"],
+  "exclude": ["**/*.test.ts"],
   "compilerOptions": {
-    "target": "ESNext",
-    "moduleResolution": "node",
-    "isolatedModules": true,
-    "declaration": true,
-    // "declarationMap": true,
-    // "sourceMap": true,
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
     "outDir": "./dist",
-    //properties are not initialized in abstract classes 
-    "strictPropertyInitialization": false,
-    "experimentalDecorators": true,
+    "declaration": true,
+    "declarationDir": "./dist",
     "esModuleInterop": true
-  },
-  "include": [
-    "src/index.ts",
-  ],
-  "exclude": []
+  }
 }

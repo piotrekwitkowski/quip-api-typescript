@@ -8,7 +8,7 @@
     "/dist/*"
   ],
   "scripts": {
-    "build": "rm -rf dist/* && tsc",
+    "build": "rm -rf dist/* && rollup --config rollup.config.js",
     "test": "jest"
   },
   "repository": {
@@ -30,6 +30,7 @@
     "axios": "^0.26.1"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.2",
     "@types/jest": "^27.4.1",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.4",
