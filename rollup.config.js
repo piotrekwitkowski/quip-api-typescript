@@ -7,5 +7,6 @@ export default {
     dir: 'dist',
     format: 'cjs'
   },
+  external: ['axios'],
   plugins: [typescript()]
 };
