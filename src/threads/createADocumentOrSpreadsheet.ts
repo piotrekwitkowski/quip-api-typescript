@@ -1,6 +1,7 @@
+import { Thread } from ".";
 import { Post } from "../types";
 
-export interface createADocumentOrSpreadsheetRequestProps {
+export interface CreateADocumentOrSpreadsheetRequestProps {
   body: {
     content: string;
     format?: 'html' | 'markdown';
@@ -10,10 +11,21 @@ export interface createADocumentOrSpreadsheetRequestProps {
   }
 }
 
+export interface CreateADocumentOrSpreadsheetResponse {
+  thread: Thread,
+  user_ids: string[],
+  shared_folder_ids: string[],
+  expanded_user_ids: string[],
+  invited_user_emails: string[],
+  markdown?: string;
+  access_levels?: object,
+  html?: string
+}
+
 // https://quip.com/dev/automation/documentation/current#operation/createDocument
-export const createADocumentOrSpreadsheet = (post: Post) => (props: createADocumentOrSpreadsheetRequestProps) => {
+export const createADocumentOrSpreadsheet = (post: Post) => (props: CreateADocumentOrSpreadsheetRequestProps) => {
   // REQUEST BODY SCHEMA: application/x-www-form-urlencoded
   const { body } = props;
 
-  return post(`1/threads/new-document`, new URLSearchParams(body));
+  return post<CreateADocumentOrSpreadsheetResponse>(`1/threads/new-document`, new URLSearchParams(body));
 }
