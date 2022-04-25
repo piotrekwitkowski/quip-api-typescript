@@ -26,7 +26,7 @@ const client = new QuipClient(ACCESS_TOKEN);
 client.threads.getThreadHtmlV2({ id: '' }).then(response => doSomething(response));
 
 // or this
-client.users.getUser({ id: 'john@acme.com'}).then(response => doSomething(response));
+client.users.getUser({ id: 'john@acme.com' }).then(response => doSomething(response));
 ```
 
 ## Documentation
