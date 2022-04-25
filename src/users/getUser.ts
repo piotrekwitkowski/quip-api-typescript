@@ -7,7 +7,7 @@ export interface GetUserRequestProps {
   // sort_order: string;
 }
 
-export type GetUserResponse = {
+export interface GetUserResponse {
   id: string;
   name: string;
   is_robot: boolean;
