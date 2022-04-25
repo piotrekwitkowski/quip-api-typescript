@@ -17,16 +17,16 @@ This library should be considered as Work In Progress. The [official Quip Node l
 For now, the library supports only access token auth (no OAuth).
 
 ```ts
-import { getQuipClient } from 'quip-api-typescript';
+import { QuipClient } from 'quip-api-typescript';
 
 const ACCESS_TOKEN = 'your-access-token';
-const client = getQuipClient(ACCESS_TOKEN);
+const client = new QuipClient(ACCESS_TOKEN);
 
 // use like this
-client.threads.getThreadHtmlV2({ id: '' }).then(response => console.log(response.html));
+client.threads.getThreadHtmlV2({ id: '' }).then(response => doSomething(response));
 
-// or
-client.users.getUser({ id: 'john@acme.com'} ).then(response => doSomething());
+// or this
+client.users.getUser({ id: 'john@acme.com'}).then(response => doSomething(response));
 ```
 
 ## Documentation
