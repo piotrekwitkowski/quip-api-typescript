@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getQuipClient, EditADocumentLocation } from ".";
+import { QuipClient, EditADocumentLocation } from ".";
 
 jest.mock("axios");
 const axiosMock = axios as jest.Mocked<typeof axios>;
@@ -7,7 +7,7 @@ axiosMock.get.mockResolvedValue({ data: {} })
 axiosMock.post.mockResolvedValue({ data: {} })
 
 describe('library', () => {
-  const client = getQuipClient('');
+  const client = new QuipClient('');
 
   it('exports a client object', () => {
     expect(client).toBeDefined();

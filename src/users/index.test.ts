@@ -4,14 +4,14 @@ const get = jest.fn();
 // const post = jest.fn();
 
 describe('users file', () => {
-  const methods = users.getUsersMethods(get);
+  const api = new users.UsersAPI(get);
   afterEach(() => {
     get.mockReset();
     // post.mockReset();
   });
 
   it('has callable getUser method that uses get', () => {
-    methods.getUser({ id: '' });
+    api.getUser({ id: '' });
     expect(get).toBeCalledTimes(1);
   });
 

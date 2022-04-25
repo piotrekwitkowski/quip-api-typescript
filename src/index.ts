@@ -1,18 +1,21 @@
 import axios from 'axios';
 
-import { getThreadsMethods, EditADocumentLocation } from "./threads";
-import { getUsersMethods } from "./users";
+import { EditADocumentLocation, ThreadsAPI } from "./threads";
+import { UsersAPI } from "./users";
 
-export const getQuipClient = (accessToken: string, urlBase = 'https://platform.quip.com/') => {
-  const axiosConfig = { headers: { Authorization: 'Bearer ' + accessToken } };
-  const get = <T>(path: string) => axios.get<T>(urlBase + path, axiosConfig).then(response => response.data);
-  const post = <T>(path: string, data: any) => axios.post<T>(urlBase + path, data, axiosConfig).then(response => response.data);
+export class QuipClient {
+  threads: ThreadsAPI;
+  users: UsersAPI;
 
-  return ({
-    threads: getThreadsMethods(get, post),
-    users: getUsersMethods(get),
-  });
-};
+  constructor(accessToken: string, urlBase = 'https://platform.quip.com/') {
+    const axiosConfig = { headers: { Authorization: 'Bearer ' + accessToken } };
+    const get = <T>(path: string) => axios.get<T>(urlBase + path, axiosConfig).then(response => response.data);
+    const post = <T>(path: string, data: any) => axios.post<T>(urlBase + path, data, axiosConfig).then(response => response.data);
+    
+    this.threads = new ThreadsAPI(get, post);
+    this.users = new UsersAPI(get);
+  }
+}
 
 // re-export enums
 export { EditADocumentLocation };
