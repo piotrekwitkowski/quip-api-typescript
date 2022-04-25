@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.0.0...v1.1.0) (2022-04-25)
+
+
+### Features
+
+* add CreateDocumentResponse type ([be19bef](https://github.com/piotrekwitkowski/quip-api-typescript/commit/be19bef992b3d293767e0b26f14d727e96d94c1e))
+
+
+### Bug Fixes
+
+* use interface for GetUserResponse ([0ee282e](https://github.com/piotrekwitkowski/quip-api-typescript/commit/0ee282e147476755171c051f97c2c41deac3521a))
+
 ## [1.0.0](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v0.0.7...v1.0.0) (2022-04-25)
 
 ### [0.0.7](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v0.0.6...v0.0.7) (2022-04-25)
