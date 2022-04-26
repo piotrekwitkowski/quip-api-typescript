@@ -8,7 +8,7 @@
     "/dist/*"
   ],
   "scripts": {
-    "build": "rm -rf dist/* && rollup --config rollup.config.js && npm run generate-docs",
+    "build": "rm -rf dist/* && rollup --config rollup.config.js",
     "generate-docs": "typedoc --entryPointStrategy expand src --exclude \"**/*.test.ts\" --plugin typedoc-plugin-merge-modules",
     "release": "standard-version",
     "test": "jest"
