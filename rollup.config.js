@@ -5,7 +5,8 @@ export default {
   input: 'src/index.ts',
   output: {
     dir: 'dist',
-    format: 'cjs'
+    format: 'esm',
+    name: 'QuipClient'
   },
   external: ['axios'],
   plugins: [typescript()]
