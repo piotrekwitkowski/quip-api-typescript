@@ -1,6 +1,6 @@
 {
   "name": "quip-api-typescript",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "This is the unofficial and incomplete, but TypeScript-compatible and promise-based library to access the [Quip Automation API](https://quip.com/api/).",
   "main": "dist/index.js",
   "type": "module",

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.6](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.1.5...v1.1.6) (2022-04-26)
+
+
+### Bug Fixes
+
+* add missing type to getUser ([2094400](https://github.com/piotrekwitkowski/quip-api-typescript/commit/209440073ff3a241889b0c0cba5a8e47cc6d9747))
+
 ### [1.1.5](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.1.3...v1.1.5) (2022-04-25)
 
 ### [1.1.4](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.1.3...v1.1.4) (2022-04-25)
