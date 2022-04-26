@@ -2,6 +2,7 @@
   "include": ["src/**/*.ts"],
   "exclude": ["**/*.test.ts"],
   "compilerOptions": {
+    "noImplicitAny": true,
     "outDir": "./dist",
     "declaration": true,
     "declarationDir": "./dist",
