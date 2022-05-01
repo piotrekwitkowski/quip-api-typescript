@@ -1,12 +1,13 @@
 # quip-api-typescript
 
 [![codecov](https://codecov.io/gh/piotrekwitkowski/quip-api-typescript/branch/main/graph/badge.svg?token=T2G2GO9T9K)](https://codecov.io/gh/piotrekwitkowski/quip-api-typescript)
+[![npm version](https://badge.fury.io/js/quip-api-typescript.svg)](https://www.npmjs.com/package/quip-api-typescript)
 
-This is the unofficial TypeScript-compatible and promise-based library to access the [Quip Automation API](https://quip.com/api/). 
+This is the unofficial Node.js library to access the [Quip Automation API](https://quip.com/api/).
 
 ## Notice 
 
-This library should be considered as Work In Progress. The [official Quip Node library](https://github.com/quip/quip-api/) wasn't updated in the last 6 years, so I created this one that is much more convenient to use thanks to typings and promises.
+This library should be considered as Work In Progress. The official [quip-api library](https://github.com/quip/quip-api/) wasn't updated recently and isn't maintained anymore, so I created this one that is more convenient to use thanks to typings and promises.
 
 ## Installation
 
