@@ -16,6 +16,7 @@ describe('library', () => {
   it('exports apis', () => {
     expect(client).toHaveProperty('threads');
     expect(client).toHaveProperty('users');
+    expect(client).toHaveProperty('folders');
   });
 
   it('calls axios for GET requests', () => {
