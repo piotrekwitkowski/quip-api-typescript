@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.1.7...v1.2.0) (2022-05-27)
+
+
+### Features
+
+* add client.folders.getFolder method ([81962ae](https://github.com/piotrekwitkowski/quip-api-typescript/commit/81962ae0a7624af84c6d2b837e6505a098446db3))
+
 ### [1.1.7](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.1.6...v1.1.7) (2022-04-26)
 
 ### [1.1.6](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.1.5...v1.1.6) (2022-04-26)
