@@ -28,7 +28,7 @@ export interface Folder {
   // };
 }
 
-// https://quip.com/dev/automation/documentation/current#operation/getFolder
+/** @internal */
 export const getFolder = (get: Get) => (props: GetFolderRequestProps) => {
   const { id } = props;
   return get<GetFolderResponse>(`1/folders/${id}`);

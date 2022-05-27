@@ -18,7 +18,7 @@ export interface AddPeopleToAThreadResponse {
   html: string;
 }
 
-// https://quip.com/dev/automation/documentation/current#operation/addMembersToThreadOrAddThreadToFolders
+/** @internal */
 export const addMembersToThreadOrAddThreadToFolders = (post: Post) => (props: AddPeopleToAThreadRequestProps) => {
   // REQUEST BODY SCHEMA: application/x-www-form-urlencoded
   const { body } = props;

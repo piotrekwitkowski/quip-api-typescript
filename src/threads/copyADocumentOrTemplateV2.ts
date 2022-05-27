@@ -25,7 +25,7 @@ export interface CopyADocumentOrTemplateV2Response {
   }
 }
 
-// https://quip.com/dev/automation/documentation/current#operation/copyDocumentV2
+/** @internal */
 export const copyADocumentOrTemplateV2 = (post: Post) => (props: CopyADocumentOrTemplateV2RequestProps) => {
   // REQUEST BODY SCHEMA: application/json
   const { threadIdOrSecretPath, body } = props;

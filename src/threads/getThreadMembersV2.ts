@@ -13,7 +13,7 @@ export interface GetThreadMembersV2Response {
   response_metadata: ResponseMetadata;
 }
 
-// https://quip.com/dev/automation/documentation/current#operation/getThreadMembersV2
+/** @internal */
 export const getThreadMembersV2 = (get: Get) => (props: GetThreadMembersV2RequestProps) => {
   const { threadIdOrSecretPath } = props;
   // TODO: implement query parameters

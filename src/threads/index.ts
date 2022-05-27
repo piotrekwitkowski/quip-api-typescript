@@ -8,13 +8,25 @@ import { getThreadHtmlV2, GetThreadHtmlV2RequestProps, GetThreadHtmlV2Response }
 import { getThreadMembersV2, GetThreadMembersV2RequestProps, GetThreadMembersV2Response } from "./getThreadMembersV2";
 
 export class ThreadsAPI {
+  /** [Quip API Reference](https://quip.com/dev/automation/documentation/current#operation/addMembersToThreadOrAddThreadToFolders) */
   addMembersToThreadOrAddThreadToFolders: (props: AddPeopleToAThreadRequestProps) => Promise<AddPeopleToAThreadResponse>;
+
+  /** [Quip API Reference](https://quip.com/dev/automation/documentation/current#operation/copyDocumentV2) */
   copyADocumentOrTemplateV2: (props: CopyADocumentOrTemplateV2RequestProps) => Promise<CopyADocumentOrTemplateV2Response>;
+
+  /** [Quip API Reference](https://quip.com/dev/automation/documentation/current#operation/createDocument) */
   createADocumentOrSpreadsheet: (props: CreateADocumentOrSpreadsheetRequestProps) => Promise<CreateADocumentOrSpreadsheetResponse>;
+
+  /** [Quip API Reference](https://quip.com/dev/automation/documentation/current#operation/editDocument) */
   editADocument: (props: EditADocumentRequestProps) => Promise<EditADocumentResponse>;
+
+  /** [Quip API Reference](https://quip.com/dev/automation/documentation/current#operation/getThreadHtmlV2) */
   getThreadHtmlV2: (props: GetThreadHtmlV2RequestProps) => Promise<GetThreadHtmlV2Response>;
+
+  /** [Quip API Reference](https://quip.com/dev/automation/documentation/current#operation/getThreadMembersV2) */
   getThreadMembersV2: (props: GetThreadMembersV2RequestProps) => Promise<GetThreadMembersV2Response>;
 
+  /** @internal */
   constructor(get: Get, post: Post) {
     this.addMembersToThreadOrAddThreadToFolders = addMembersToThreadOrAddThreadToFolders(post);
     this.copyADocumentOrTemplateV2 = copyADocumentOrTemplateV2(post);

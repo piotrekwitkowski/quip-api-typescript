@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "rm -rf dist/* && rollup --config rollup.config.js",
-    "generate-docs": "typedoc --entryPointStrategy expand src --exclude \"**/*.test.ts\" --plugin typedoc-plugin-merge-modules",
+    "generate-docs": "typedoc --entryPointStrategy expand src --exclude \"**/*.test.ts\" --plugin typedoc-plugin-merge-modules --excludeInternal",
     "release": "standard-version",
     "test": "jest"
   },

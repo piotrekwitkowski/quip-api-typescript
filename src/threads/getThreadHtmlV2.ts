@@ -11,7 +11,7 @@ export interface GetThreadHtmlV2Response {
   response_metadata: ResponseMetadata;
 }
 
-// https://quip.com/dev/automation/documentation/current#operation/getThreadHtmlV2
+/** @internal */
 export const getThreadHtmlV2 = (get: Get) => (props: GetThreadHtmlV2RequestProps) => {
   const { id } = props;
 

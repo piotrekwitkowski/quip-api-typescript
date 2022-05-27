@@ -37,7 +37,7 @@ export interface EditADocumentResponse {
   section_ids?: string[];
 }
 
-// https://quip.com/dev/automation/documentation/current#operation/editDocument
+/** @internal */
 export const editADocument = (post: Post) => (props: EditADocumentRequestProps) => {
   // REQUEST BODY SCHEMA: application/x-www-form-urlencoded
   const { body } = props;

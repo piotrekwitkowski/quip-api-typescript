@@ -24,7 +24,7 @@ export interface Emails {
 }
 
 
-// https://quip.com/dev/automation/documentation/current#operation/getUser
+/** @internal */
 export const getUser = (get: Get) => (props: GetUserRequestProps) => {
   const { id } = props;
   return get<GetUserResponse>(`1/users/${id}`);

@@ -22,7 +22,7 @@ export interface CreateADocumentOrSpreadsheetResponse {
   html?: string
 }
 
-// https://quip.com/dev/automation/documentation/current#operation/createDocument
+/** @internal */
 export const createADocumentOrSpreadsheet = (post: Post) => (props: CreateADocumentOrSpreadsheetRequestProps) => {
   // REQUEST BODY SCHEMA: application/x-www-form-urlencoded
   const { body } = props;
