@@ -26,6 +26,5 @@ export interface CreateADocumentOrSpreadsheetResponse {
 export const createADocumentOrSpreadsheet = (post: Post) => (props: CreateADocumentOrSpreadsheetRequestProps) => {
   // REQUEST BODY SCHEMA: application/x-www-form-urlencoded
   const { body } = props;
-
   return post<CreateADocumentOrSpreadsheetResponse>(`1/threads/new-document`, new URLSearchParams(body));
 }
