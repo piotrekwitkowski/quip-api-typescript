@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.2.1...v1.3.0) (2022-05-29)
+
+
+### Features
+
+* add client.threads.getThreadV2 method ([764f1ae](https://github.com/piotrekwitkowski/quip-api-typescript/commit/764f1aebb459300700445604f8abaa64f1a0dedd))
+
 ### [1.2.1](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.2.0...v1.2.1) (2022-05-27)
 
 ## [1.2.0](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.1.7...v1.2.0) (2022-05-27)
