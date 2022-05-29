@@ -40,4 +40,9 @@ describe('threads file', () => {
     expect(get).toBeCalledTimes(1);
   });
 
+  it('has callable getThreadV2 method that uses get', () => {
+    api.getThreadV2({ id: '' });
+    expect(get).toBeCalledTimes(1);
+  });
+
 });
