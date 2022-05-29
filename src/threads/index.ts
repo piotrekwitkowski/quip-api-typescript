@@ -6,6 +6,7 @@ import { createADocumentOrSpreadsheet, CreateADocumentOrSpreadsheetRequestProps,
 import { editADocument, EditADocumentLocation, EditADocumentRequestProps, EditADocumentResponse } from "./editADocument";
 import { getThreadHtmlV2, GetThreadHtmlV2RequestProps, GetThreadHtmlV2Response } from "./getThreadHtmlV2";
 import { getThreadMembersV2, GetThreadMembersV2RequestProps, GetThreadMembersV2Response } from "./getThreadMembersV2";
+import { getThreadV2, GetThreadV2RequestProps, GetThreadV2Response } from "./getThreadV2";
 
 export class ThreadsAPI {
   /** [Quip API Reference](https://quip.com/dev/automation/documentation/current#operation/addMembersToThreadOrAddThreadToFolders) */
@@ -26,6 +27,9 @@ export class ThreadsAPI {
   /** [Quip API Reference](https://quip.com/dev/automation/documentation/current#operation/getThreadMembersV2) */
   getThreadMembersV2: (props: GetThreadMembersV2RequestProps) => Promise<GetThreadMembersV2Response>;
 
+  /** [Quip API Reference](https://quip.com/dev/automation/documentation/current#operation/getThreadV2) */
+  getThreadV2: (props: GetThreadV2RequestProps) => Promise<GetThreadV2Response>;
+
   /** @internal */
   constructor(get: Get, post: Post) {
     this.addMembersToThreadOrAddThreadToFolders = addMembersToThreadOrAddThreadToFolders(post);
@@ -34,6 +38,7 @@ export class ThreadsAPI {
     this.editADocument = editADocument(post);
     this.getThreadHtmlV2 = getThreadHtmlV2(get);
     this.getThreadMembersV2 = getThreadMembersV2(get);
+    this.getThreadV2 = getThreadV2(get);
   }
 }
 
