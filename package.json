@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/piotrekwitkowski/quip-api-typescript#readme",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^1.1.3"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^9.0.2",
