@@ -2,9 +2,8 @@ import { Get } from "../types";
 
 export interface GetFolderRequestProps {
   id: string;
-  // TODO: implement QUERY PARAMETERS
-  // sort_by: string;
-  // sort_order: string;
+  sort_by?: string;
+  sort_order?: string;
 }
 
 export interface GetFolderResponse {
@@ -19,17 +18,23 @@ export interface Folder {
   id: string;
   created_usec: number;
   updated_usec: number;
-  // TODO: confirm possible string values (can folder_type be "shared" | "private" ? etc)
-  // folder_type: "shared";
-  // inherit_mode: "inherit";
-  // sharing: {
-  //   company_mode: "EDIT";
-  //   company_id: "LbdAcAwVVIA";
-  // };
+  color?: string;
+  parent_id?: string;
+  folder_type?: 'shared' | 'private';
+  inherit_mode?: 'inherit' | 'reset';
+  link?: string;
+  sharing?: {
+    company_mode?: string;
+    company_id?: string;
+  };
 }
 
 /** @internal */
 export const getFolder = (get: Get) => (props: GetFolderRequestProps) => {
-  const { id } = props;
-  return get<GetFolderResponse>(`1/folders/${id}`);
+  const { id, sort_by, sort_order } = props;
+  const params = new URLSearchParams();
+  if (sort_by !== undefined) params.set('sort_by', sort_by);
+  if (sort_order !== undefined) params.set('sort_order', sort_order);
+  const query = params.toString();
+  return get<GetFolderResponse>(`1/folders/${id}${query ? `?${query}` : ''}`);
 };

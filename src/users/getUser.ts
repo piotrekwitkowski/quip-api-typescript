@@ -2,9 +2,8 @@ import { Get } from "../types";
 
 export interface GetUserRequestProps {
   id: string;
-  // TODO: implement QUERY PARAMETERS
-  // sort_by: string;
-  // sort_order: string;
+  sort_by?: string;
+  sort_order?: string;
 }
 
 export interface GetUserResponse {
@@ -26,6 +25,10 @@ export interface Emails {
 
 /** @internal */
 export const getUser = (get: Get) => (props: GetUserRequestProps) => {
-  const { id } = props;
-  return get<GetUserResponse>(`1/users/${id}`);
+  const { id, sort_by, sort_order } = props;
+  const params = new URLSearchParams();
+  if (sort_by !== undefined) params.set('sort_by', sort_by);
+  if (sort_order !== undefined) params.set('sort_order', sort_order);
+  const query = params.toString();
+  return get<GetUserResponse>(`1/users/${id}${query ? `?${query}` : ''}`);
 };
