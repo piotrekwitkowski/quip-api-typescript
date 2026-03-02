@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.3.0...v1.4.0) (2026-03-02)
+
+
+### Features
+
+* add full Quip Automation API coverage (41 new endpoints) ([58f130a](https://github.com/piotrekwitkowski/quip-api-typescript/commit/58f130a4bab02b49ccc055905771eede0312ad28))
+
 ## [1.3.0](https://github.com/piotrekwitkowski/quip-api-typescript/compare/v1.2.1...v1.3.0) (2022-05-29)
 
 
